@@ -29,3 +29,11 @@ vim.opt.updatetime = 50
 -- vim.opt.colorcolumn = "80"
 
 vim.opt.mouse = ""
+
+vim.g.neovide_input_use_logo = false
+vim.g.neovide_input_macos_alt_is_meta = true
+vim.filetype.add({
+  extension = {
+    odin = "odin",
+  }
+})

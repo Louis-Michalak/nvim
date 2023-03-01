@@ -9,16 +9,6 @@ lsp.ensure_installed({
   'zls',
 })
 
--- Fix Undefined global 'vim'
-lsp.configure('sumneko_lua', {
-  settings = {
-    Lua = {
-      diagnostics = {
-        globals = { 'vim' }
-      }
-    }
-  },
-})
 lsp.configure('eslint', {
   code_actions = {
     enable = true,

@@ -1,0 +1,9 @@
+{
+  "languageserver": {
+    "odin": {
+      "command": "ols",
+      "filetype": ["odin"],
+      "rootPatterns": ["ols.json"]
+    }
+  }
+}
