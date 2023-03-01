@@ -5,8 +5,8 @@ lsp.preset("recommended")
 lsp.ensure_installed({
   'tsserver',
   'eslint',
-  'sumneko_lua',
   'rust_analyzer',
+  'zls',
 })
 
 -- Fix Undefined global 'vim'
@@ -24,7 +24,6 @@ lsp.configure('eslint', {
     enable = true,
     apply_on_save = {
       enable = true,
-      types = { "directive", "problem", "suggestion", "layout" },
     },
   },
   diagnostics = {

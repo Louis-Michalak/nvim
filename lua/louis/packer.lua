@@ -9,14 +9,14 @@ return require('packer').startup(function(use)
 		requires = { {'nvim-lua/plenary.nvim'} }
 	})
 	use({
-		'rose-pine/neovim',
-		as = 'rose-pine',
+    'folke/tokyonight.nvim',
+		as = 'tokyonight',
 		config = function()
-			require("rose-pine").setup()
-			vim.cmd('colorscheme rose-pine')
+			require("tokyonight").setup()
+			vim.cmd('colorscheme tokyonight-moon')
 		end
 	})
-	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+  use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 	use('nvim-treesitter/playground')
 	use('ThePrimeagen/harpoon')
 	use("mbbill/undotree")
@@ -47,4 +47,14 @@ return require('packer').startup(function(use)
   -- to configure
   -- use({"glepnir/dashboard-nvim", requires = { { "nvim-tree/nvim-web-devicons" } }, events = 'VimEnter' })
   use 'nvim-treesitter/nvim-treesitter-context'
+  use 'karb94/neoscroll.nvim'
+  use {
+    'phaazon/hop.nvim',
+    branch = 'v2', -- optional but strongly recommended
+    config = function()
+      -- you can configure Hop the way you like here; see :h hop-config
+      require'hop'.setup()
+    end
+  }
+  use 'm4xshen/autoclose.nvim'
 end)
